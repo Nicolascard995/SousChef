@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# 🍳 SousChef - Sistema de Gestión de Cocina Inteligente
 
-## Project info
+## 📋 Descripción
+SousChef es una aplicación web moderna para la gestión integral de cocinas profesionales, con funcionalidades avanzadas de inventario, gestión de chefs, y análisis de datos en tiempo real.
 
-**URL**: https://lovable.dev/projects/3c4df55e-5077-47d0-939a-87cb5dcc0c99
+## 🚀 Características Principales
+- **Dashboard Inteligente** con métricas en tiempo real
+- **Gestión de Inventario** avanzada con alertas automáticas
+- **Sistema de Usuarios** con roles y permisos
+- **Interfaz Mobile-First** optimizada para dispositivos móviles
+- **Integración con Supabase** para backend robusto
+- **Sistema de Alertas** inteligente para gestión de stock
 
-## How can I edit this code?
+## 📁 Estructura del Proyecto
 
-There are several ways of editing your application.
+```
+SousChef/
+├── 📚 docs/                    # Documentación del proyecto
+├── ⚙️  config/                  # Archivos de configuración
+├── 🛠️  scripts/                 # Scripts de utilidad
+├── 🎨 public/                   # Assets públicos
+├── 💻 src/                      # Código fuente
+│   ├── components/             # Componentes React
+│   ├── hooks/                  # Hooks personalizados
+│   ├── pages/                  # Páginas de la aplicación
+│   ├── types/                  # Definiciones de TypeScript
+│   └── utils/                  # Utilidades y helpers
+└── 🔐 supabase/                # Configuración de Supabase
+```
 
-**Use Lovable**
+## 🛠️ Tecnologías Utilizadas
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + Shadcn/ui
+- **Backend**: Supabase (PostgreSQL + Auth + Real-time)
+- **Estado**: React Hooks + Context API
+- **Testing**: Vitest + Testing Library
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3c4df55e-5077-47d0-939a-87cb5dcc0c99) and start prompting.
+## 🚀 Instalación y Uso
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerrequisitos
+- Node.js 18+ 
+- npm o yarn
+- Cuenta de Supabase
 
-**Use your preferred IDE**
+### Instalación
+```bash
+# Clonar el repositorio
+git clone https://github.com/Nicolascard995/SousChef.git
+cd SousChef
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Instalar dependencias
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Configurar variables de entorno
+cp docs/.env.example .env
+# Editar .env con tus credenciales
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Ejecutar en desarrollo
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📚 Documentación
+Consulta la carpeta `docs/` para documentación detallada:
+- [Guía de Implementación Mobile](./docs/MOBILE_IMPLEMENTATION_README.md)
+- [Documentación de Base de Datos](./docs/DATABASE_README.md)
+- [Guía de Seguridad](./docs/SECURITY.md)
+- [Roadmap de Mejoras](./docs/ROADMAP_IMPROVEMENTS.md)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🤝 Contribución
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-**Use GitHub Codespaces**
+## 📄 Licencia
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 👨‍💻 Autor
+**Nicolas Card** - [GitHub](https://github.com/Nicolascard995)
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3c4df55e-5077-47d0-939a-87cb5dcc0c99) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🙏 Agradecimientos
+- Comunidad de React y TypeScript
+- Equipo de Supabase
+- Contribuidores de Shadcn/ui y Tailwind CSS

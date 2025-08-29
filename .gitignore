@@ -112,3 +112,19 @@ pnpm-lock.yaml
 
 # Local configuration files
 *.local
+
+# Project specific
+config/local.*
+scripts/local.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Supabase local development
+.supabase/
+supabase/.branches/
+supabase/.temp/
+supabase/config.toml
+supabase/.env
+supabase/seed.sql

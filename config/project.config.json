@@ -1,0 +1,36 @@
+{
+  "project": {
+    "name": "SousChef",
+    "version": "1.0.0",
+    "description": "Sistema de Gestión de Cocina Inteligente",
+    "author": "Nicolas Card",
+    "repository": "https://github.com/Nicolascard995/SousChef"
+  },
+  "build": {
+    "outputDir": "dist",
+    "assetsDir": "assets",
+    "sourceMap": true,
+    "minify": true
+  },
+  "development": {
+    "port": 3000,
+    "host": "localhost",
+    "open": true
+  },
+  "features": {
+    "mobileFirst": true,
+    "offlineSupport": true,
+    "realTimeUpdates": true,
+    "businessIntelligence": true
+  },
+  "integrations": {
+    "supabase": {
+      "enabled": true,
+      "features": ["auth", "database", "realtime", "storage"]
+    },
+    "analytics": {
+      "enabled": false,
+      "provider": "google"
+    }
+  }
+}

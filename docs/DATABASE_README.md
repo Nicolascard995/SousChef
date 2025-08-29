@@ -227,7 +227,7 @@ graph TD
   ```
 
 ### Supabase (Preparado)
-- **Configuración actual**: `project_id = "tjopnfhzsufmdybtxipl"`
+- **Configuración actual**: `project_id = "[TU_PROJECT_ID]"` (configurado en variables de entorno)
 - **Ventajas**: Multi-usuario, backup automático, consultas SQL
 - **Estructura preparada**: Todas las interfaces están listas para migración
 

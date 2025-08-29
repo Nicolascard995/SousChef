@@ -1,0 +1,38 @@
+# Configuración de ejemplo para Supabase
+# COPIA este archivo como config.toml y llena con tus valores reales
+
+# ID del proyecto (obtener desde dashboard de Supabase)
+project_id = "your_project_id_here"
+
+# Configuración de la base de datos
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+# Configuración de autenticación
+[auth]
+enabled = true
+port = 54322
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://localhost:3000"]
+jwt_expiry = 3600
+enable_signup = true
+
+# Configuración de almacenamiento
+[storage]
+enabled = true
+port = 54323
+file_size_limit = "50MiB"
+
+# Configuración de Edge Functions
+[edge_runtime]
+enabled = true
+port = 54324
+
+# NOTA IMPORTANTE:
+# - NUNCA comitees config.toml con valores reales
+# - Mantén config.toml en tu .gitignore
+# - Usa config.example.toml como plantilla

@@ -7,7 +7,7 @@
 
 const requiredEnvVars = [
   'VITE_SUPABASE_URL',
-  'VITE_SUPABASE_ANON_KEY',
+  'VITE_SUPABASE_PUBLISHABLE_KEY',
 ] as const;
 
 // Verificar que todas las variables requeridas estén definidas
@@ -30,7 +30,7 @@ for (const envVar of requiredEnvVars) {
 
 export const supabaseConfig = {
   url: import.meta.env.VITE_SUPABASE_URL as string,
-  anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY as string,
+  anonKey: import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string,
   
   // Validar formato de URL de Supabase
   get isValidUrl() {
