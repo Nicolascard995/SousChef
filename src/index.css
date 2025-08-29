@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sistema de Colores Simplificado - Küchen-Meister Plan
+   Colores principales: 5 + 10 chefs + neutros adaptativos */
+
+/* Variables CSS para breakpoints mobile-first */
+:root {
+  --mobile: 640px;
+  --tablet: 768px;
+  --desktop: 1024px;
+  --large: 1280px;
+}
+
+/* Estilos base para móvil */
+.container {
+  @apply px-4 py-2;
+  max-width: 100%;
+}
+
+/* Tablet y superior */
+@media (min-width: 768px) {
+  .container {
+    @apply px-6 py-4;
+    max-width: 90%;
+  }
+}
+
+/* Desktop y superior */
+@media (min-width: 1024px) {
+  .container {
+    @apply px-8 py-6;
+    max-width: 80%;
+  }
+}
+
+@layer base {
+:root {
+  /* COLORES PRINCIPALES - SOLO 3 ESENCIALES */
+  --primary: 213 84% 59%;      /* #2563eb - Azul corporativo */
+  --success: 158 68% 38%;      /* #059669 - Verde éxito */
+  --danger: 220 38 38%;        /* #dc2626 - Rojo crítico */
+  
+  /* NEUTROS - ESCALA DE GRISES */
+  --background: 0 0% 100%;     /* #ffffff - Fondo principal */
+  --surface: 210 40% 98%;      /* #f8fafc - Superficie secundaria */
+  --text: 222 84% 5%;          /* #0f172a - Texto principal */
+  --text-muted: 218 11% 56%;   /* #64748b - Texto secundario */
+  --border: 214 32% 91%;       /* #e2e8f0 - Bordes */
+  
+  /* CHEFS - SOLO 7 COLORES DISTINTOS */
+  --chef-1: 0 84% 60%;         /* #ef4444 - Rojo */
+  --chef-2: 21 90% 56%;        /* #f97316 - Naranja */
+  --chef-3: 48 96% 53%;        /* #eab308 - Amarillo */
+  --chef-4: 142 76% 47%;       /* #22c55e - Verde */
+  --chef-5: 188 95% 44%;       /* #06b6d4 - Cyan */
+  --chef-6: 217 91% 60%;       /* #3b82f6 - Azul */
+  --chef-7: 262 83% 58%;       /* #8b5cf6 - Púrpura */
+
+  /* COMPATIBILIDAD - SIMPLIFICADA */
+  --foreground: var(--text);
+  --card: var(--background);
+  --card-foreground: var(--text);
+  --popover: var(--background);
+  --popover-foreground: var(--text);
+  --primary-foreground: 0 0% 100%;
+  --success-foreground: 0 0% 100%;
+  --danger-foreground: 0 0% 100%;
+  --muted: var(--surface);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--border);
+  --accent-foreground: var(--text);
+  --destructive: var(--danger);
+  --destructive-foreground: var(--danger-foreground);
+  --input: var(--border);
+  --ring: var(--primary);
+  --radius: 0.75rem;
+}
+
+[data-theme="dark"] {
+  --background: 222 84% 5%;    /* #0f172a */
+  --surface: 215 28% 17%;      /* #1e293b */
+  --text: 210 40% 98%;         /* #f8fafc */
+  --text-muted: 215 16% 67%;   /* #94a3b8 */
+  --border: 215 25% 27%;       /* #334155 */
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'SF Pro Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Professional Typography Scale */
+  h1 {
+    @apply text-3xl font-bold leading-tight;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold leading-tight;
+  }
+
+  h3 {
+    @apply text-lg font-semibold leading-tight;
+  }
+
+  /* Professional Button Styles - ALTO CONTRASTE */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-bold transition-all duration-200 hover:bg-primary/90 hover:scale-[1.02] shadow-lg shadow-primary/30;
+  }
+
+  .btn-neutral {
+    @apply bg-slate-100 text-slate-800 border-2 border-slate-300 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-slate-200 hover:border-slate-400 shadow-md;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white px-6 py-3 rounded-lg font-bold transition-all duration-200 hover:bg-danger/90 shadow-lg shadow-danger/30;
+  }
+
+  /* Botones de Acción Secundaria - ALTO CONTRASTE */
+  .btn-secondary {
+    @apply bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-slate-600 shadow-md;
+  }
+
+  /* Botones Outline con Alto Contraste - NUEVO */
+  .btn-outline-contrast {
+    @apply bg-white text-slate-700 border-2 border-slate-300 px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-slate-50 hover:border-slate-400 hover:text-slate-800 shadow-sm;
+  }
+
+  /* Professional Card Styles */
+  .card-elevation-1 {
+    @apply bg-card border border-border rounded-xl shadow-sm;
+  }
+
+  .card-elevation-2 {
+    @apply bg-card border border-border rounded-xl shadow-md;
+  }
+
+  .card-elevation-3 {
+    @apply bg-card border border-border rounded-xl shadow-lg;
+  }
+
+  /* Professional Input Styles */
+  .input-professional {
+    @apply bg-white border-2 border-border rounded-lg px-4 py-3 text-base transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20;
+  }
+
+  /* Status Badge Styles - ALTO CONTRASTE */
+  .badge-danger {
+    @apply bg-danger text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse shadow-md;
+  }
+
+  .badge-success {
+    @apply bg-success text-white px-3 py-1 rounded-full text-xs font-bold shadow-md;
+  }
+
+  .badge-neutral {
+    @apply bg-slate-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md;
+  }
+
+  .badge-primary {
+    @apply bg-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-md;
+  }
+
+  /* Chef Avatar Styles */
+  .chef-avatar {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md;
+  }
+
+  .chef-avatar-large {
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg;
+  }
+
+  /* Progress Bar Styles */
+  .progress-bar {
+    @apply h-2 bg-muted rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full transition-all duration-500 ease-out;
+  }
+
+  /* Sistema de Sombras - PROFUNDIDAD VISUAL */
+  .shadow-elevation-1 {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-elevation-2 {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-elevation-3 {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Animation Keyframes */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  @keyframes bounce-subtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+  }
+
+  @keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Animation Classes */
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 1s ease-in-out infinite;
+  }
+
+  .animate-rotate-slow {
+    animation: rotate-slow 3s linear infinite;
+  }
+}
